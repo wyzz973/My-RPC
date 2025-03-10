@@ -16,7 +16,7 @@ import java.util.concurrent.Executors;
 public class TestClient1 {
     public static void main(String[] args) {
         // 线程池，模拟 50 个并发请求
-        int threadCount = 300;
+        int threadCount = 30000;
         ExecutorService executorService = Executors.newFixedThreadPool(threadCount);
         CountDownLatch latch = new CountDownLatch(threadCount);
 
