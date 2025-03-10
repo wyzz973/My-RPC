@@ -4,33 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf0c3152-0566-48c3-a664-b24ee84c6eb0" name="Changes" comment="rpc_version1_part2">
-      <change afterPath="$PROJECT_DIR$/version1/src/main/java/part3/Client/IOClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/version1/src/main/java/part3/Client/TestClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/version1/src/main/java/part3/Client/netty/handler/NettyClientHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/version1/src/main/java/part3/Client/netty/nettyInitializer/NettyClientInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/version1/src/main/java/part3/Client/proxy/ClientProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/version1/src/main/java/part3/Client/rpcClient/RpcClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/version1/src/main/java/part3/Client/rpcClient/impl/NettyRpcClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/version1/src/main/java/part3/Client/rpcClient/impl/SimpleSocketRpcCilent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/version1/src/main/java/part3/Client/serviceCenter/ServiceCenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/version1/src/main/java/part3/Client/serviceCenter/ZKServiceCenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/version1/src/main/java/part3/Server/TestServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/version1/src/main/java/part3/Server/netty/handler/NettyServerHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/version1/src/main/java/part3/Server/netty/nettyInitializer/NettyServerInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/version1/src/main/java/part3/Server/provider/ServiceProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/version1/src/main/java/part3/Server/server/Impl/NettyRPCRPCserver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/version1/src/main/java/part3/Server/server/Impl/SimplePRCRPCServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/version1/src/main/java/part3/Server/server/RpcServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/version1/src/main/java/part3/Server/server/work/WorkThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/version1/src/main/java/part3/Server/serviceRegister/ServiceRegister.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/version1/src/main/java/part3/Server/serviceRegister/impl/ZKServiceRegister.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/version1/src/main/java/part3/common/Message/RpcRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/version1/src/main/java/part3/common/Message/RpcResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/version1/src/main/java/part3/common/pojo/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/version1/src/main/java/part3/common/service/Impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/version1/src/main/java/part3/common/service/UserService.java" afterDir="false" />
+    <list default="true" id="bf0c3152-0566-48c3-a664-b24ee84c6eb0" name="Changes" comment="rpc_version1_part3 zookeeper">
+      <change afterPath="$PROJECT_DIR$/version2/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version2/src/main/java/part1/Client/IOClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version2/src/main/java/part1/Client/TestClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version2/src/main/java/part1/Client/netty/handler/NettyClientHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version2/src/main/java/part1/Client/netty/nettyInitializer/NettyClientInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version2/src/main/java/part1/Client/proxy/ClientProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version2/src/main/java/part1/Client/rpcClient/RpcClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version2/src/main/java/part1/Client/rpcClient/impl/NettyRpcClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version2/src/main/java/part1/Client/rpcClient/impl/SimpleSocketRpcCilent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version2/src/main/java/part1/Client/serviceCenter/ServiceCenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version2/src/main/java/part1/Client/serviceCenter/ZKServiceCenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version2/src/main/java/part1/Server/TestServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version2/src/main/java/part1/Server/netty/handler/NettyServerHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version2/src/main/java/part1/Server/netty/nettyInitializer/NettyServerInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version2/src/main/java/part1/Server/provider/ServiceProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version2/src/main/java/part1/Server/server/Impl/NettyRPCRPCserver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version2/src/main/java/part1/Server/server/Impl/SimplePRCRPCServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version2/src/main/java/part1/Server/server/RpcServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version2/src/main/java/part1/Server/server/work/WorkThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version2/src/main/java/part1/Server/serviceRegister/ServiceRegister.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version2/src/main/java/part1/Server/serviceRegister/impl/ZKServiceRegister.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version2/src/main/java/part1/common/Message/MessageType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version2/src/main/java/part1/common/Message/RpcRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version2/src/main/java/part1/common/Message/RpcResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version2/src/main/java/part1/common/pojo/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version2/src/main/java/part1/common/serializer/myCode/MyDecoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version2/src/main/java/part1/common/serializer/myCode/MyEncoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version2/src/main/java/part1/common/serializer/mySerializer/JsonSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version2/src/main/java/part1/common/serializer/mySerializer/ObjectSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version2/src/main/java/part1/common/serializer/mySerializer/Serializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version2/src/main/java/part1/common/service/Impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version2/src/main/java/part1/common/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/version1/src/main/java/part3/Client/proxy/ClientProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/version1/src/main/java/part3/Client/proxy/ClientProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/version1/src/main/java/part3/Client/rpcClient/impl/NettyRpcClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/version1/src/main/java/part3/Client/rpcClient/impl/NettyRpcClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/version1/src/main/java/part3/Server/serviceRegister/impl/ZKServiceRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/version1/src/main/java/part3/Server/serviceRegister/impl/ZKServiceRegister.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +54,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -66,20 +80,22 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "21",
-    "last_opened_file_path": "D:/JavaProjects/My-RPC/version1/src/main/java/part3",
+    "last_opened_file_path": "D:/JavaProjects/My-RPC/version2/src/main/java/part1",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "onboarding.tips.debug.path": "D:/JavaProjects/My-RPC/version1/src/main/java/org/example/Main.java",
+    "onboarding.tips.debug.path": "D:/JavaProjects/My-RPC/version2/src/main/java/org/example/Main.java",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JavaProjects\My-RPC\version2\src\main\java\part1" />
       <recent name="D:\JavaProjects\My-RPC\version1\src\main\java\part3" />
       <recent name="D:\JavaProjects\My-RPC\version1\src\main\java\part2" />
     </key>
@@ -88,10 +104,23 @@
       <recent name="part2.Client" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.part3.Client.TestClient">
+  <component name="RunManager" selected="Application.TestClient">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+      <module name="version2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="part1.Client.TestClient" />
-      <module name="version1" />
+      <module name="version2" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="part1.Client.*" />
@@ -102,25 +131,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="part2.Client.TestClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="part2.Client.TestClient" />
-      <module name="version1" />
+    <configuration name="TestServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="part1.Server.TestServer" />
+      <module name="version2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="part2.Client.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="part2.Server.TestServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="part2.Server.TestServer" />
-      <module name="version1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="part2.Server.*" />
+          <option name="PATTERN" value="part1.Server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -156,11 +172,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestClient" />
+        <item itemvalue="Application.TestServer" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.part3.Client.TestClient" />
         <item itemvalue="Application.part3.Server.TestServer" />
-        <item itemvalue="Application.part2.Client.TestClient" />
-        <item itemvalue="Application.part2.Server.TestServer" />
-        <item itemvalue="Application.TestClient" />
       </list>
     </recent_temporary>
   </component>
@@ -182,7 +198,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741529318315</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="rpc_version1_part3 zookeeper">
+      <option name="closed" value="true" />
+      <created>1741532312735</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1741532312735</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,7 +214,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="rpc_version1_part2" />
-    <option name="LAST_COMMIT_MESSAGE" value="rpc_version1_part2" />
+    <MESSAGE value="rpc_version1_part3 zookeeper" />
+    <option name="LAST_COMMIT_MESSAGE" value="rpc_version1_part3 zookeeper" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -200,7 +225,51 @@
           <line>22</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/version2/src/main/java/org/example/Main.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/version2/src/main/java/part1/common/serializer/mySerializer/JsonSerializer.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/version2/src/main/java/part1/Server/netty/handler/NettyServerHandler.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/version2/src/main/java/part1/Server/netty/handler/NettyServerHandler.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/version2/src/main/java/part1/Server/netty/nettyInitializer/NettyServerInitializer.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/version2/src/main/java/part1/common/service/Impl/UserServiceImpl.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/version2/src/main/java/part1/common/service/Impl/UserServiceImpl.java</url>
+          <line>16</line>
+          <properties class="part1.common.service.Impl.UserServiceImpl" method="getUserByUserId">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="interfaceName" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

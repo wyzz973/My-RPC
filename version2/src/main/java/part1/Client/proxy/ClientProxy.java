@@ -1,10 +1,8 @@
-package part3.Client.proxy;
-
-import part3.Client.rpcClient.RpcClient;
-import part3.Client.rpcClient.impl.NettyRpcClient;
-import part3.Client.rpcClient.impl.SimpleSocketRpcCilent;
-import part3.common.Message.RpcRequest;
-import part3.common.Message.RpcResponse;
+package part1.Client.proxy;
+import part1.Client.rpcClient.RpcClient;
+import part1.Client.rpcClient.impl.NettyRpcClient;
+import part1.common.Message.RpcRequest;
+import part1.common.Message.RpcResponse;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
