@@ -4,7 +4,7 @@ import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;
 import lombok.AllArgsConstructor;
-import part1.common.serializer.mySerializer.JsonSerializer;
+import part2.common.serializer.mySerializer.JsonSerializer;
 import part2.Server.netty.handler.NettyServerHandler;
 import part2.Server.provider.ServiceProvider;
 import part2.common.serializer.myCode.MyDecoder;

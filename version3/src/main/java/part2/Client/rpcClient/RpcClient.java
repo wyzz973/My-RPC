@@ -10,5 +10,6 @@ import part2.common.Message.RpcResponse;
  * @description: 定义底层通信的方法
  */
 public interface RpcClient {
+    //定义底层通信的方法
     RpcResponse sendRequest(RpcRequest request);
 }

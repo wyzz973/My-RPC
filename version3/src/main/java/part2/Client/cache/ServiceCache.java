@@ -26,6 +26,7 @@ public class ServiceCache {
             List<String> addressList = new ArrayList<>();
             addressList.add(address);
             cache.put(serviceName, addressList);
+            System.out.println("将name为" + serviceName + "和地址为" + address + "的服务添加到本地缓存中");
         }
     }
 

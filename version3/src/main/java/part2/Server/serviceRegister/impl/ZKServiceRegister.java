@@ -21,7 +21,7 @@ public class ZKServiceRegister implements ServiceRegister {
     //zookeeper根路径节点
     private static final String ROOT_PATH = "MyRPC";
 
-    private static final String RETYR = "CanRetry";
+    private static final String RETRY = "CanRetry";
 
     //负责zookeeper客户端的初始化，并与zookeeper服务端进行连接
     public ZKServiceRegister(){
@@ -40,7 +40,7 @@ public class ZKServiceRegister implements ServiceRegister {
          */
         this.client = CuratorFrameworkFactory.builder()
                 .connectString("127.0.0.1:2181") // ZooKeeper 服务地址
-                .sessionTimeoutMs(40000)         // 会话超时时间，与 ZooKeeper 配置相关
+                .sessionTimeoutMs(8000)         // 会话超时时间，与 ZooKeeper 配置相关
                 .retryPolicy(policy)             // 使用指数退避重试策略
                 .namespace(ROOT_PATH)            // 指定命名空间，每次创建的节点都会在 /MyRPC 下
                 .build();
@@ -61,7 +61,7 @@ public class ZKServiceRegister implements ServiceRegister {
 
             // 路径地址，一个/代表一个节点
             // 构造服务提供者的地址节点，格式为 /服务名/地址（例如：/UserService/127.0.0.1:8080）
-            String path= "/" + serviceName + "/" + getServiceAddress(serviceAddress);
+            String path = "/" + serviceName + "/" + getServiceAddress(serviceAddress);
 
             System.out.println("临时节点....:" + path);
 
@@ -70,10 +70,12 @@ public class ZKServiceRegister implements ServiceRegister {
 
             //如果这个服务是幂等性的，就添加在节点中
             if (canRetry){
-                path += "/" + RETYR + "/" + serviceName;
+                path = "/" + RETRY + "/" + serviceName;
+                System.out.println("可以retry的path:" + path);
                 client.create().creatingParentsIfNeeded().withMode(CreateMode.EPHEMERAL).forPath(path);
             }
         } catch (Exception e) {
+//            e.printStackTrace();
             System.out.println("此服务已存在");
         }
     }

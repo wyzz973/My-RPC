@@ -3,7 +3,7 @@ package part2.Client.netty.nettyInitializer;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;
-import part1.common.serializer.mySerializer.JsonSerializer;
+import part2.common.serializer.mySerializer.JsonSerializer;
 import part2.Client.netty.handler.NettyClientHandler;
 import part2.common.serializer.myCode.MyDecoder;
 import part2.common.serializer.myCode.MyEncoder;

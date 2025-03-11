@@ -4,14 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf0c3152-0566-48c3-a664-b24ee84c6eb0" name="Changes" comment="rpc_version2_part2 watch动态更新本地缓存">
-      <change afterPath="$PROJECT_DIR$/version3/src/main/java/part1/Client/serviceCenter/balance/impl/ConsistencyHashBalance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/version3/src/main/java/part1/Client/serviceCenter/balance/impl/RandomLoadBalance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/version3/src/main/java/part1/Client/serviceCenter/balance/impl/RoundLoadBalance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/version3/src/main/java/part1/TestServer1.java" afterDir="false" />
+    <list default="true" id="bf0c3152-0566-48c3-a664-b24ee84c6eb0" name="Changes" comment="rpc_version3_part2 超时重试 白名单">
+      <change afterPath="$PROJECT_DIR$/version3/src/main/java/part1/common/serializer/mySerializer/JsonSerializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/version3/src/main/java/part1/Client/serviceCenter/ZKServiceCenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/version3/src/main/java/part1/Client/serviceCenter/ZKServiceCenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/version3/src/main/java/part1/Client/serviceCenter/balance/LoadBalance.java" beforeDir="false" afterPath="$PROJECT_DIR$/version3/src/main/java/part1/Client/serviceCenter/balance/LoadBalance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/version3/src/main/java/part2/Client/TestClient1.java" beforeDir="false" afterPath="$PROJECT_DIR$/version3/src/main/java/part2/Client/TestClient1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/version3/src/main/java/part2/Client/netty/nettyInitializer/NettyClientInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/version3/src/main/java/part2/Client/netty/nettyInitializer/NettyClientInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/version3/src/main/java/part2/Client/proxy/ClientProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/version3/src/main/java/part2/Client/proxy/ClientProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/version3/src/main/java/part2/Client/retry/guavaRetry.java" beforeDir="false" afterPath="$PROJECT_DIR$/version3/src/main/java/part2/Client/retry/guavaRetry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/version3/src/main/java/part2/Client/rpcClient/RpcClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/version3/src/main/java/part2/Client/rpcClient/RpcClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/version3/src/main/java/part2/Client/rpcClient/impl/NettyRpcClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/version3/src/main/java/part2/Client/rpcClient/impl/NettyRpcClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/version3/src/main/java/part2/Client/serviceCenter/ZKServiceCenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/version3/src/main/java/part2/Client/serviceCenter/ZKServiceCenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/version3/src/main/java/part2/Client/serviceCenter/ZkWatcher/watchZK.java" beforeDir="false" afterPath="$PROJECT_DIR$/version3/src/main/java/part2/Client/serviceCenter/ZkWatcher/watchZK.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/version3/src/main/java/part2/Server/TestServer1.java" beforeDir="false" afterPath="$PROJECT_DIR$/version3/src/main/java/part2/Server/TestServer1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/version3/src/main/java/part2/Server/netty/nettyInitializer/NettyServerInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/version3/src/main/java/part2/Server/netty/nettyInitializer/NettyServerInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/version3/src/main/java/part2/Server/serviceRegister/impl/ZKServiceRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/version3/src/main/java/part2/Server/serviceRegister/impl/ZKServiceRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/version3/target/classes/part1/TestServer1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/version3/target/classes/part1/common/serializer/mySerializer/JsonSerializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/version3/target/classes/part1/common/serializer/mySerializer/JsonSerializer.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +38,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -39,58 +50,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.JAVA_MODULE": "21",
-    "last_opened_file_path": "D:/JavaProjects/My-RPC/version3/src/main/java/part1",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "onboarding.tips.debug.path": "D:/JavaProjects/My-RPC/version3/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;21&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/JavaProjects/My-RPC/version3/src/main/java/part2&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;D:/JavaProjects/My-RPC/version3/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JavaProjects\My-RPC\version3\src\main\java\part2" />
+      <recent name="D:\JavaProjects\My-RPC\version3\src\main\java" />
       <recent name="D:\JavaProjects\My-RPC\version3\src\main\java\part1" />
       <recent name="D:\JavaProjects\My-RPC\version2\src\main\java\part2" />
       <recent name="D:\JavaProjects\My-RPC\version2\src\main\java\part1" />
-      <recent name="D:\JavaProjects\My-RPC\version1\src\main\java\part3" />
-      <recent name="D:\JavaProjects\My-RPC\version1\src\main\java\part2" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="part2.common.serializer" />
+      <recent name="part1.common.serializer.mySerializer" />
       <recent name="part2.Client.rpcClient" />
       <recent name="part2.Client" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.part1.Client.TestClient1">
-    <configuration name="ConsistentHashWithVirtualNodes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="part1.ConsistentHashWithVirtualNodes" />
+  <component name="RunManager" selected="Application.TestClient">
+    <configuration name="TestClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="part2.Client.TestClient" />
       <module name="version3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="part1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestClient1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="part2.Client.TestClient1" />
-      <module name="version2" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="part2.Client.*" />
@@ -101,12 +101,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestServer (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="part1.Server.TestServer" />
+    <configuration name="TestClient1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="part2.Client.TestClient1" />
       <module name="version3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="part1.Server.*" />
+          <option name="PATTERN" value="part2.Client.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -114,12 +114,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestServer1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="part1.TestServer1" />
+    <configuration name="TestServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="part2.Server.TestServer" />
       <module name="version3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="part1.*" />
+          <option name="PATTERN" value="part2.Server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -140,13 +140,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="part2.Server.TestServer1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="part2.Server.TestServer1" />
+      <module name="version3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="part2.Server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.part1.Client.TestClient1" />
-        <item itemvalue="Application.TestServer1" />
-        <item itemvalue="Application.ConsistentHashWithVirtualNodes" />
-        <item itemvalue="Application.TestServer (1)" />
+        <item itemvalue="Application.TestClient" />
+        <item itemvalue="Application.TestServer" />
+        <item itemvalue="Application.part2.Server.TestServer1" />
         <item itemvalue="Application.TestClient1" />
+        <item itemvalue="Application.part1.Client.TestClient1" />
       </list>
     </recent_temporary>
   </component>
@@ -159,6 +172,7 @@
       <option name="presentableId" value="Default" />
       <updated>1741421697619</updated>
       <workItem from="1741421698667" duration="7380000" />
+      <workItem from="1741683405232" duration="3920000" />
     </task>
     <task id="LOCAL-00001" summary="rpc_version1_part2">
       <option name="closed" value="true" />
@@ -200,7 +214,23 @@
       <option name="project" value="LOCAL" />
       <updated>1741613478005</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="rpc_version3_part3 负载均衡">
+      <option name="closed" value="true" />
+      <created>1741618962569</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1741618962569</updated>
+    </task>
+    <task id="LOCAL-00007" summary="rpc_version3_part4 超时重试 白名单">
+      <option name="closed" value="true" />
+      <created>1741620905351</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1741620905351</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,7 +241,9 @@
     <MESSAGE value="rpc_version1_part3 zookeeper" />
     <MESSAGE value="rpc_version2_part1 自定义编码器解码器，序列转化" />
     <MESSAGE value="rpc_version2_part2 watch动态更新本地缓存" />
-    <option name="LAST_COMMIT_MESSAGE" value="rpc_version2_part2 watch动态更新本地缓存" />
+    <MESSAGE value="rpc_version3_part3 负载均衡" />
+    <MESSAGE value="rpc_version3_part4 超时重试 白名单" />
+    <option name="LAST_COMMIT_MESSAGE" value="rpc_version3_part4 超时重试 白名单" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -255,6 +287,26 @@
           <url>file://$PROJECT_DIR$/version3/src/main/java/org/example/Main.java</url>
           <line>20</line>
           <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/version3/src/main/java/part2/Client/serviceCenter/ZkWatcher/watchZK.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/version3/src/main/java/part2/Client/cache/ServiceCache.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/version3/src/main/java/part2/Server/serviceRegister/impl/ZKServiceRegister.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/version3/src/main/java/part2/Client/serviceCenter/ZkWatcher/watchZK.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/version2/src/main/java/part1/common/service/Impl/UserServiceImpl.java</url>

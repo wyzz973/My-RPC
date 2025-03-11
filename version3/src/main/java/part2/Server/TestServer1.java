@@ -8,7 +8,7 @@ import part2.common.service.UserService;
 
 public class TestServer1 {
     public static void main(String[] args) {
-        startServer("127.0.0.1", 9999);
+        startServer("127.0.0.1", 10002);
         startServer("127.0.0.1", 10000);
         startServer("127.0.0.1", 10001);
     }

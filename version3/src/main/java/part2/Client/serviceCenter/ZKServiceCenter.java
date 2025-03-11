@@ -40,7 +40,8 @@ public class ZKServiceCenter implements ServiceCenter {
 
         this.client = CuratorFrameworkFactory.builder()
                 .connectString("127.0.0.1:2181")
-                .sessionTimeoutMs(40000)
+                .sessionTimeoutMs(8000)
+                .connectionTimeoutMs(5000)
                 .retryPolicy(policy)
                 .namespace(ROOT_PATH)
                 .build();
@@ -51,7 +52,7 @@ public class ZKServiceCenter implements ServiceCenter {
         //加入zookeeper事件监听器
         watchZK watcher = new watchZK(client, serviceCache);
         //监听启动
-        watcher.watchToUpadte(ROOT_PATH);
+        watcher.watchToUpdate(ROOT_PATH);
 
 
     }
@@ -62,6 +63,7 @@ public class ZKServiceCenter implements ServiceCenter {
         try {
             //先从本地缓存中找
             List<String> serviceList = serviceCache.getServiceName(serviceName);
+
             if (serviceList == null) {
                 serviceList = client.getChildren().forPath("/" + serviceName);
             }

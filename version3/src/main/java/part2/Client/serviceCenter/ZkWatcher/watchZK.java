@@ -29,7 +29,7 @@ public class watchZK {
      * @param path
      */
 
-    public void watchToUpadte(String path) {
+    public void watchToUpdate(String path) {
         CuratorCache curatorCache = CuratorCache.build(client, "/");
         curatorCache.listenable().addListener(new CuratorCacheListener() {
             @Override
@@ -44,9 +44,8 @@ public class watchZK {
                 switch (type.name()) {
                     case "NODE_CREATED": // 监听器第一次执行时节点存在也会触发次事件
                         //获取更新的节点的路径
-                        String path = new String(childData1.getPath());
                         //按照格式 ，读取
-                        String[] pathList = path.split("/");
+                        String[] pathList = pasrePath(childData1);
                         if (pathList.length <= 2) {
                             break;
                         } else {
@@ -69,7 +68,7 @@ public class watchZK {
                         cache.replaceServiceAddress(oldPathList[1],oldPathList[2],newPathList[2]);
                         System.out.println("修改后的数据: " + new String(childData1.getData()));
                         break;
-                    case "NODE_DELETE":  // 节点删除
+                    case "NODE_DELETED":  // 节点删除
                         String[] pathListDelete = pasrePath(childData);
                         if (pathListDelete.length <= 2){
                             break;

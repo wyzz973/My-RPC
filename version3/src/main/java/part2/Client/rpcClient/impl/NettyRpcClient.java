@@ -35,8 +35,8 @@ public class NettyRpcClient implements RpcClient {
 //    }
 
 
-    public NettyRpcClient() {
-        this.serviceCenter = new ZKServiceCenter();
+    public NettyRpcClient(ServiceCenter serviceCenter) {
+        this.serviceCenter = serviceCenter;
     }
 
     //netty客户端初始化
@@ -49,17 +49,18 @@ public class NettyRpcClient implements RpcClient {
 
     @Override
     public RpcResponse sendRequest(RpcRequest request) {
+
+        /**
+         * 先去注册中心中查找服务对应的ip和port，再去连接对应的服务器
+         */
+        InetSocketAddress address = serviceCenter.serviceDiscovery(request.getInterfaceName());
+        String host = address.getHostName();
+        int port = address.getPort();
+        System.out.println("客户端得到的地址....:" + host);
+        System.out.println("客户端得到的端口号....:" + port);
         try {
-            /**
-             * 先去注册中心中查找服务对应的ip和port，再去连接对应的服务器
-             */
 
-            InetSocketAddress address = serviceCenter.serviceDiscovery(request.getInterfaceName());
-            String host = address.getHostName();
-            int port = address.getPort();
-
-            System.out.println("客户端得到的地址....:" + host);
-            System.out.println("客户端得到的端口号....:" + port);
+            //TODO 删除无用服务器
 
             //创建一个channelFuture对象，代表这一个操作事件，sync方法表示堵塞直到connect完成
             ChannelFuture channelFuture = bootstrap.connect(host, port).sync();

@@ -1,6 +1,7 @@
 package part2.Client.retry;
 
 import com.github.rholder.retry.*;
+import part2.Client.cache.ServiceCache;
 import part2.Client.rpcClient.RpcClient;
 import part2.common.Message.RpcRequest;
 import part2.common.Message.RpcResponse;
@@ -19,13 +20,15 @@ public class guavaRetry {
 
     private RpcClient rpcClient;
 
+    ServiceCache cache;
+
     public RpcResponse sendServiceWithRetry(RpcRequest request, RpcClient rpcClient) {
         this.rpcClient = rpcClient;
         Retryer<RpcResponse> retryer = RetryerBuilder.<RpcResponse>newBuilder()
                 //无论出现什么异常，都进行重试
                 .retryIfException()
                 //返回结果为 error时进行重试
-                .retryIfResult(response -> Objects.equals(response.getCode(),500))
+                .retryIfResult(response -> Objects.equals(response.getCode(), 500))
                 //重试等待策略：等待 2s 后再进行重试
                 .withWaitStrategy(WaitStrategies.fixedWait(2, TimeUnit.SECONDS))
                 //重试停止策略：重试达到 3 次
@@ -39,6 +42,14 @@ public class guavaRetry {
                 .build();
         try {
             return retryer.call(() -> rpcClient.sendRequest(request));
+            //TODO 删除无用服务器
+//            return retryer.call(() -> {
+//                RpcResponse response = rpcClient.sendRequest(request);
+//                if (response == null){
+//                    System.err.println("检测到无效服务器，剔除：" + request.getInterfaceName());
+//                    serviceCenter.getServiceCache().delete(request.getInterfaceName(), host + ":" + port);
+//                }
+//            });
         } catch (ExecutionException | RetryException e) {
             e.printStackTrace();
         }

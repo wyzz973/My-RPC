@@ -1,8 +1,10 @@
 package part2.Client.proxy;
+import lombok.AllArgsConstructor;
 import part2.Client.retry.guavaRetry;
 import part2.Client.rpcClient.RpcClient;
 import part2.Client.rpcClient.impl.NettyRpcClient;
 import part2.Client.serviceCenter.ServiceCenter;
+import part2.Client.serviceCenter.ZKServiceCenter;
 import part2.common.Message.RpcRequest;
 import part2.common.Message.RpcResponse;
 
@@ -22,7 +24,8 @@ public class ClientProxy implements InvocationHandler {
 
     private ServiceCenter serviceCenter;
     public ClientProxy() {
-        rpcClient = new NettyRpcClient();
+        serviceCenter = new ZKServiceCenter();
+        rpcClient = new NettyRpcClient(serviceCenter);
     }
 
     //jdk动态代理，每一次代理对象调用方法，都会经过此方法增强（反射获取request对象，socket发送到服务端）
