@@ -5,21 +5,119 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf0c3152-0566-48c3-a664-b24ee84c6eb0" name="Changes" comment="rpc_version3_part2 超时重试 白名单">
-      <change afterPath="$PROJECT_DIR$/version3/src/main/java/part1/common/serializer/mySerializer/JsonSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/Client/IOClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/Client/TestClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/Client/TestClient1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/Client/cache/ServiceCache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/Client/circuitBreaker/CircuitBreaker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/Client/circuitBreaker/CircuitBreakerProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/Client/circuitBreaker/CircuitBreakerState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/Client/netty/handler/NettyClientHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/Client/netty/nettyInitializer/NettyClientInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/Client/proxy/ClientProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/Client/retry/guavaRetry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/Client/rpcClient/RpcClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/Client/rpcClient/impl/NettyRpcClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/Client/rpcClient/impl/SimpleSocketRpcCilent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/Client/serviceCenter/ServiceCenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/Client/serviceCenter/ZKServiceCenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/Client/serviceCenter/ZkWatcher/watchZK.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/Client/serviceCenter/balance/LoadBalance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/Client/serviceCenter/balance/impl/ConsistencyHashBalance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/Client/serviceCenter/balance/impl/RandomLoadBalance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/Client/serviceCenter/balance/impl/RoundLoadBalance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/Server/TestServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/Server/TestServer1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/Server/netty/handler/NettyServerHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/Server/netty/nettyInitializer/NettyServerInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/Server/provider/ServiceProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/Server/ratelimit/RateLimit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/Server/ratelimit/impl/TokenBucketRateLimitImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/Server/ratelimit/provider/RateLimitProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/Server/server/Impl/NettyRPCRPCserver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/Server/server/Impl/SimplePRCRPCServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/Server/server/RpcServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/Server/server/work/WorkThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/Server/serviceRegister/ServiceRegister.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/Server/serviceRegister/impl/ZKServiceRegister.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/common/Message/MessageType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/common/Message/RpcRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/common/Message/RpcResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/common/pojo/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/common/serializer/myCode/MyDecoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/common/serializer/myCode/MyEncoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/common/serializer/mySerializer/JsonSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/common/serializer/mySerializer/ObjectSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/common/serializer/mySerializer/Serializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/common/service/Impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version4/src/main/java/part1/common/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-api/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-api/src/main/java/org/example/pojo/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-api/src/main/java/org/example/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-common/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-common/src/main/java/org/example/exception/SerializeException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-common/src/main/java/org/example/message/MessageType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-common/src/main/java/org/example/message/RpcRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-common/src/main/java/org/example/message/RpcResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-common/src/main/java/org/example/serializer/myCode/MyDecoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-common/src/main/java/org/example/serializer/myCode/MyEncoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-common/src/main/java/org/example/serializer/mySerializer/HessianSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-common/src/main/java/org/example/serializer/mySerializer/JsonSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-common/src/main/java/org/example/serializer/mySerializer/KryoSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-common/src/main/java/org/example/serializer/mySerializer/ObjectSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-common/src/main/java/org/example/serializer/mySerializer/ProtostuffSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-common/src/main/java/org/example/serializer/mySerializer/Serializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-common/src/main/java/org/example/util/ConfigUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-common/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-consumer/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-consumer/src/main/java/ConsumerTestConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-consumer/src/main/java/org/example/consumer/ConsumerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-core/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-core/src/main/java/org/example/RpcApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-core/src/main/java/org/example/client/cache/ServiceCache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-core/src/main/java/org/example/client/circuitBreaker/CircuitBreaker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-core/src/main/java/org/example/client/circuitBreaker/CircuitBreakerProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-core/src/main/java/org/example/client/circuitBreaker/CircuitBreakerState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-core/src/main/java/org/example/client/netty/handler/NettyClientHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-core/src/main/java/org/example/client/netty/nettyInitializer/NettyClientInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-core/src/main/java/org/example/client/proxy/ClientProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-core/src/main/java/org/example/client/retry/guavaRetry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-core/src/main/java/org/example/client/rpcClient/RpcClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-core/src/main/java/org/example/client/rpcClient/impl/NettyRpcClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-core/src/main/java/org/example/client/rpcClient/impl/SimpleSocketRpcCilent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-core/src/main/java/org/example/client/serviceCenter/ServiceCenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-core/src/main/java/org/example/client/serviceCenter/ZKServiceCenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-core/src/main/java/org/example/client/serviceCenter/ZkWatcher/watchZK.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-core/src/main/java/org/example/client/serviceCenter/balance/LoadBalance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-core/src/main/java/org/example/client/serviceCenter/balance/impl/ConsistencyHashBalance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-core/src/main/java/org/example/client/serviceCenter/balance/impl/RandomLoadBalance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-core/src/main/java/org/example/client/serviceCenter/balance/impl/RoundLoadBalance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-core/src/main/java/org/example/config/RpcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-core/src/main/java/org/example/config/RpcConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-core/src/main/java/org/example/server/netty/handler/NettyServerHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-core/src/main/java/org/example/server/netty/nettyInitializer/NettyServerInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-core/src/main/java/org/example/server/provider/ServiceProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-core/src/main/java/org/example/server/ratelimit/RateLimit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-core/src/main/java/org/example/server/ratelimit/impl/TokenBucketRateLimitImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-core/src/main/java/org/example/server/ratelimit/provider/RateLimitProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-core/src/main/java/org/example/server/server/Impl/NettyRPCRPCserver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-core/src/main/java/org/example/server/server/Impl/SimplePRCRPCServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-core/src/main/java/org/example/server/server/RpcServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-core/src/main/java/org/example/server/server/work/WorkThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-core/src/main/java/org/example/server/serviceRegister/ServiceRegister.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-core/src/main/java/org/example/server/serviceRegister/impl/ZKServiceRegister.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-core/src/main/java/org/example/test/balance/ConsistencyHashBalanceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-core/src/main/java/org/example/test/balance/TestRandomLoadBalance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-provider/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-provider/src/main/java/org/example/provider/ProviderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-provider/src/main/java/org/example/provider/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version5/rpc-provider/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/version3/src/main/java/part2/Client/TestClient1.java" beforeDir="false" afterPath="$PROJECT_DIR$/version3/src/main/java/part2/Client/TestClient1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/version3/src/main/java/part2/Client/netty/nettyInitializer/NettyClientInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/version3/src/main/java/part2/Client/netty/nettyInitializer/NettyClientInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/version3/src/main/java/part2/Client/proxy/ClientProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/version3/src/main/java/part2/Client/proxy/ClientProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/version3/src/main/java/part2/Client/retry/guavaRetry.java" beforeDir="false" afterPath="$PROJECT_DIR$/version3/src/main/java/part2/Client/retry/guavaRetry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/version3/src/main/java/part2/Client/rpcClient/RpcClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/version3/src/main/java/part2/Client/rpcClient/RpcClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/version3/src/main/java/part2/Client/rpcClient/impl/NettyRpcClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/version3/src/main/java/part2/Client/rpcClient/impl/NettyRpcClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/version3/src/main/java/part2/Client/serviceCenter/ZKServiceCenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/version3/src/main/java/part2/Client/serviceCenter/ZKServiceCenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/version3/src/main/java/part2/Client/serviceCenter/ZkWatcher/watchZK.java" beforeDir="false" afterPath="$PROJECT_DIR$/version3/src/main/java/part2/Client/serviceCenter/ZkWatcher/watchZK.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/version3/src/main/java/part2/Server/TestServer1.java" beforeDir="false" afterPath="$PROJECT_DIR$/version3/src/main/java/part2/Server/TestServer1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/version3/src/main/java/part2/Server/netty/nettyInitializer/NettyServerInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/version3/src/main/java/part2/Server/netty/nettyInitializer/NettyServerInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/version3/src/main/java/part2/Server/serviceRegister/impl/ZKServiceRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/version3/src/main/java/part2/Server/serviceRegister/impl/ZKServiceRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/version3/target/classes/part1/TestServer1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/version3/target/classes/part1/common/serializer/mySerializer/JsonSerializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/version3/target/classes/part1/common/serializer/mySerializer/JsonSerializer.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,50 +148,54 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;21&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/JavaProjects/My-RPC/version3/src/main/java/part2&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;D:/JavaProjects/My-RPC/version3/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "21",
+    "last_opened_file_path": "D:/JavaProjects/My-RPC/version5/rpc-common/src/main/java/org/example",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "onboarding.tips.debug.path": "D:/JavaProjects/My-RPC/version5/common/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\JavaProjects\My-RPC\version3\src\main\java\part2" />
-      <recent name="D:\JavaProjects\My-RPC\version3\src\main\java" />
-      <recent name="D:\JavaProjects\My-RPC\version3\src\main\java\part1" />
-      <recent name="D:\JavaProjects\My-RPC\version2\src\main\java\part2" />
-      <recent name="D:\JavaProjects\My-RPC\version2\src\main\java\part1" />
+      <recent name="D:\JavaProjects\My-RPC\version5\rpc-common\src\main\java\org\example" />
+      <recent name="D:\JavaProjects\My-RPC\version5\rpc-provider\src\main\resources" />
+      <recent name="D:\JavaProjects\My-RPC\version5\rpc-common\src\main\resources" />
+      <recent name="D:\JavaProjects\My-RPC\version5\rpc-core\src\main\java" />
+      <recent name="D:\JavaProjects\My-RPC\version5\rpc-common\src\main\java" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.provider" />
+      <recent name="provider" />
+      <recent name="consumer" />
       <recent name="part2.common.serializer" />
       <recent name="part1.common.serializer.mySerializer" />
-      <recent name="part2.Client.rpcClient" />
-      <recent name="part2.Client" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TestClient">
-    <configuration name="TestClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="part2.Client.TestClient" />
-      <module name="version3" />
+  <component name="RunManager" selected="Application.ConsumerTestConfig">
+    <configuration name="ConsistencyHashBalance" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.client.serviceCenter.balance.impl.ConsistencyHashBalance" />
+      <module name="rpc-core" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="part2.Client.*" />
+          <option name="PATTERN" value="org.example.client.serviceCenter.balance.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -101,12 +203,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestClient1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="part2.Client.TestClient1" />
-      <module name="version3" />
+    <configuration name="ConsistencyHashBalanceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.test.balance.ConsistencyHashBalanceTest" />
+      <module name="rpc-core" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="part2.Client.*" />
+          <option name="PATTERN" value="org.example.test.balance.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -114,12 +216,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="part2.Server.TestServer" />
-      <module name="version3" />
+    <configuration name="ConsumerTestConfig" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ConsumerTestConfig" />
+      <module name="rpc-consumer" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProviderTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.provider.ProviderTest" />
+      <module name="rpc-provider" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="part2.Server.*" />
+          <option name="PATTERN" value="org.example.provider.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -127,25 +236,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="part1.Client.TestClient1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="part1.Client.TestClient1" />
-      <module name="version3" />
+    <configuration name="TestRandomLoadBalance" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.test.balance.TestRandomLoadBalance" />
+      <module name="rpc-core" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="part1.Client.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="part2.Server.TestServer1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="part2.Server.TestServer1" />
-      <module name="version3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="part2.Server.*" />
+          <option name="PATTERN" value="org.example.test.balance.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -155,11 +251,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestClient" />
-        <item itemvalue="Application.TestServer" />
-        <item itemvalue="Application.part2.Server.TestServer1" />
-        <item itemvalue="Application.TestClient1" />
-        <item itemvalue="Application.part1.Client.TestClient1" />
+        <item itemvalue="Application.ConsumerTestConfig" />
+        <item itemvalue="Application.ProviderTest" />
+        <item itemvalue="Application.TestRandomLoadBalance" />
+        <item itemvalue="Application.ConsistencyHashBalance" />
+        <item itemvalue="Application.ConsistencyHashBalanceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -172,7 +268,7 @@
       <option name="presentableId" value="Default" />
       <updated>1741421697619</updated>
       <workItem from="1741421698667" duration="7380000" />
-      <workItem from="1741683405232" duration="3920000" />
+      <workItem from="1741683405232" duration="37522000" />
     </task>
     <task id="LOCAL-00001" summary="rpc_version1_part2">
       <option name="closed" value="true" />
@@ -230,7 +326,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741620905351</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="rpc_version3_part2 超时重试 白名单">
+      <option name="closed" value="true" />
+      <created>1741694297658</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1741694297658</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,7 +347,8 @@
     <MESSAGE value="rpc_version2_part2 watch动态更新本地缓存" />
     <MESSAGE value="rpc_version3_part3 负载均衡" />
     <MESSAGE value="rpc_version3_part4 超时重试 白名单" />
-    <option name="LAST_COMMIT_MESSAGE" value="rpc_version3_part4 超时重试 白名单" />
+    <MESSAGE value="rpc_version3_part2 超时重试 白名单" />
+    <option name="LAST_COMMIT_MESSAGE" value="rpc_version3_part2 超时重试 白名单" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -289,11 +394,6 @@
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/version3/src/main/java/part2/Client/serviceCenter/ZkWatcher/watchZK.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/version3/src/main/java/part2/Client/cache/ServiceCache.java</url>
           <line>20</line>
           <option name="timeStamp" value="20" />
@@ -307,6 +407,41 @@
           <url>file://$PROJECT_DIR$/version3/src/main/java/part2/Client/serviceCenter/ZkWatcher/watchZK.java</url>
           <line>71</line>
           <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/version4/src/main/java/org/example/Main.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/version5/src/main/java/org/example/Main.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/version5/rpc-api/src/main/java/org/example/Main.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/version5/rpc-consumer/src/main/java/org/example/Main.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/version5/rpc-provider/src/main/java/org/example/Main.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/version5/rpc-core/src/main/java/org/example/Main.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/version5/rpc-common/src/main/java/org/example/Main.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/version2/src/main/java/part1/common/service/Impl/UserServiceImpl.java</url>
